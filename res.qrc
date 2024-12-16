@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>images/clip.ico</file>
+        <file>images/clip.png</file>
+        <file>images/arrow_double_down.ico</file>
+        <file>images/blue_down.ico</file>
+    </qresource>
+    <qresource prefix="/font">
+        <file>font/LXGWWenKaiMono-Light.ttf</file>
+    </qresource>
+</RCC>

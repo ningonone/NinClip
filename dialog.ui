@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>927</width>
+    <height>730</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777208</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Space Mono</family>
+    <pointsize>14</pointsize>
+   </font>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::DefaultContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>NinClip</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+    font-size: 14pt; /* 字体大小 */
+    background-color: #E6E6FA;  /* 暗调的浅蓝色（薰衣草色） */
+    border: 3px solid #4B0082;  /* 暗紫色细线框 */
+
+}
+
+QDialog * {
+    font-family: 'Space Mono', monospace; /* 默认字体（英文） */
+}
+
+QDialog QWidget {
+    font-family: 'LXGW WenKai', serif; /* 中文字体 */
+}</string>
+  </property>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>80</y>
+     <width>641</width>
+     <height>591</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>10</y>
+      <width>551</width>
+      <height>511</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0">
+     <property name="spacing">
+      <number>3</number>
+     </property>
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
+     <item>
+      <widget class="QTabWidget" name="tabWidget">
+       <property name="font">
+        <font>
+         <family>LXGW WenKai</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QTabWidget::pane {
+    border: 1px solid #cccccc;
+    background: white;
+    border-radius: 5px;
+}
+
+QTabBar::tab {
+    background: #e0e0e0;
+    border: 1px solid #cccccc;
+    padding: 5px 10px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+QTabBar::tab:selected {
+    background: white;
+    border-bottom-color: white;
+}</string>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="tab">
+        <attribute name="title">
+         <string>Main</string>
+        </attribute>
+        <widget class="QListWidget" name="listWidget">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>561</width>
+           <height>391</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>LXGW WenKai</family>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QListWidget {
+    background-color: white;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+    outline: 0;  /* 移除焦点时的轮廓 */
+}
+
+QListWidget::item {
+    padding: 10px;
+    border-bottom: 1px solid #E0E0E0;
+    color: #333333;
+}
+
+QListWidget::item:last {
+    border-bottom: none;
+}
+
+QListWidget::item:hover {
+    background-color: #F5F5F5;
+}
+
+QListWidget::item:selected {
+    background-color: #E8F0FE;
+    color: #1a73e8;
+    border: none;  /* 移除选中项的边框 */
+}
+
+QListWidget::item:focus {
+    border: none;  /* 移除焦点项的边框 */
+    outline: none;  /* 移除焦点项的轮廓 */
+}
+
+QListWidget::item:selected:active {
+    background-color: #D2E3FC;
+    border: none;  /* 确保活动选中项也没有边框 */
+}
+
+QListWidget QScrollBar:vertical {
+    border: none;
+    background: white;
+    width: 8px;
+    margin: 0px 0px 0px 0px;
+}
+
+QListWidget QScrollBar::handle:vertical {
+    background: #BDBDBD;
+    min-height: 20px;
+    border-radius: 4px;
+}
+
+QListWidget QScrollBar::add-line:vertical, QListWidget QScrollBar::sub-line:vertical {
+    height: 0px;
+}</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="spacing">
+        <number>3</number>
+       </property>
+       <property name="sizeConstraint">
+        <enum>QLayout::SetDefaultConstraint</enum>
+       </property>
+       <property name="leftMargin">
+        <number>3</number>
+       </property>
+       <property name="topMargin">
+        <number>3</number>
+       </property>
+       <property name="rightMargin">
+        <number>3</number>
+       </property>
+       <property name="bottomMargin">
+        <number>3</number>
+       </property>
+       <item>
+        <widget class="QLineEdit" name="lineEdit">
+         <property name="font">
+          <font>
+           <family>Microsoft YaHei</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+	border: 1px solid #A0A0A0; /* 边框宽度为1px，颜色为#A0A0A0 */
+	border-radius: 3px; /* 边框圆角 */
+	padding-left: 5px; /* 文本距离左边界有5px */
+	background-color: #F2F2F2; /* 背景颜色 */
+	color: #A0A0A0; /* 文本颜色 */
+	selection-background-color: #A0A0A0; /* 选中文本的背景颜色 */
+	selection-color: #F2F2F2; /* 选中文本的颜色 */
+	font-family: &quot;Microsoft YaHei&quot;; /* 文本字体族 */
+	font-size: 10pt; /* 文本字体大小 */
+}
+
+QLineEdit:hover { /* 鼠标悬浮在QLineEdit时的状态 */
+	border: 1px solid #298DFF;
+	border-radius: 3px;
+	background-color: #FFFFFF;
+	color: #298DFF;
+	selection-background-color: #FFFFFF;
+	selection-color: #FFFFFF;
+}
+
+QLineEdit:focus { /* 鼠标悬浮在QLineEdit时的状态 */
+	border: 1px solid #298DFF;
+	border-radius: 3px;
+	background-color: #FFFFFF;
+	color: #298DFF;
+	selection-background-color: #FFFFFF;
+	selection-color: #FFFFFF;
+}
+
+
+QLineEdit[echoMode=&quot;2&quot;] { /* QLineEdit有输入掩码时的状态 */
+	lineedit-password-character: 9679;
+	lineedit-password-mask-delay: 2000;
+}
+
+QLineEdit:disabled { /* QLineEdit在禁用时的状态 */
+	border: 1px solid #CDCDCD;
+	background-color: #CDCDCD;
+	color: #B4B4B4;
+}
+
+QLineEdit:read-only { /* QLineEdit在只读时的状态 */
+	background-color: #CDCDCD;
+	color: #F2F2F2;
+}</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="toolButton">
+         <property name="font">
+          <font>
+           <family>Microsoft YaHei</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">.QPushButton,.QToolButton{
+	border: 1px solid #A0A0A0; /* 边框宽度为1px，颜色为#A0A0A0 */
+	border-radius: 3px; /* 边框圆角 */
+	background-color: #F2F2F2; /* 背景颜色 */
+	color: #A0A0A0; /* 文本颜色 */
+	selection-background-color: #A0A0A0; /* 选中文本的背景颜色 */
+	selection-color: #F2F2F2; /* 选中文本的颜色 */
+	font-family: &quot;Microsoft YaHei&quot;; /* 文本字体族 */
+	font-size: 10pt; /* 文本字体大小 */
+}
+
+QToolButton::icon {
+    alignment: center;  /* 将图标居中 */
+    padding-left: 0px;  /* 左侧内边距 */
+    padding-right: 0px;  /* 右侧内边距 */
+    margin-left: auto;   /* 自动左边距 */
+    margin-right: auto;  /* 自动右边距 */
+    text-align: center;  /* 如果按钮有文本，这里也是居中显示 */
+}
+
+.QPushButton:hover,.QToolButton:hover{
+	border: 1px solid #298DFF;
+	border-radius: 3px;
+	background-color: #FFFFFF;
+	color: #298DFF;
+	selection-background-color: #298DFF;
+	selection-color: #F2F2F2;
+}
+
+.QPushButton:pressed,.QToolButton:pressed{
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #E1E4E6,stop:1 #CCD3D9);
+}
+
+.QToolButton::menu-indicator{
+image:None;
+}
+
+QToolButton#btnMenu,QToolButton#btnTool,QPushButton#btnMenu_Min,QPushButton#btnMenu_Max,QPushButton#btnMenu_Close{
+border-radius:3px;
+color:#000000;
+padding:3px;
+margin:0px;
+background:none;
+border-style:none;
+}
+
+QToolButton#btnMenu:hover,QPushButton#btnMenu_Min:hover,QPushButton#btnMenu_Max:hover{
+color:#FFFFFF;
+margin:1px 1px 2px 1px;
+background-color:rgba(51,127,209,230);
+}
+
+/*QToolButton#btnTool:hover{
+    color:#FFFFFF;
+    margin:1px 1px 2px 1px;
+    background-color:rgba(51,127,209,230);
+}*/
+
+QToolButton#btnTool:hover{  /*鼠标放上后*/
+    color:rgb(255, 255, 255);
+    min-height:20;
+    border-style: solid;
+    border-top-left-radius:2px;
+    border-top-right-radius:2px;
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 rgb(226,236,241),  stop: 0.3 rgb(160,160,160),  stop: 1 rgb(120,120,120));
+    border:1px;
+    border-radius:5px;
+    padding:2px 4px;
+}
+
+QToolButton#btnTool:pressed{ /*按下按钮后*/
+    color:rgb(255, 255, 255);
+    min-height:20;
+    border-style:solid;
+    border-top-left-radius:2px;
+    border-top-right-radius:2px;
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 rgb(226,236,241),  stop: 0.3 rgb(190,190,190),  stop: 1 rgb(160,160,160));
+    border:1px;
+    border-radius:5px;
+    padding:2px 4px;
+}
+
+QToolButton#btnTool:checked{    /*选中后*/
+    color:rgb(255, 255, 255);
+    min-height:20;
+    border-style:solid;
+    border-top-left-radius:2px;
+    border-top-right-radius:2px;
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 rgb(226,236,241),  stop: 0.3 rgb(190,190,190),  stop: 1 rgb(160,160,160));
+    border:1px;
+    border-radius:5px;
+    padding:2px 4px;
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="res.qrc">
+           <normaloff>:/images/images/blue_down.ico</normaloff>:/images/images/blue_down.ico</iconset>
+         </property>
+         <property name="popupMode">
+          <enum>QToolButton::InstantPopup</enum>
+         </property>
+         <property name="toolButtonStyle">
+          <enum>Qt::ToolButtonIconOnly</enum>
+         </property>
+         <property name="autoRaise">
+          <bool>true</bool>
+         </property>
+         <property name="arrowType">
+          <enum>Qt::NoArrow</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actClearDB">
+   <property name="text">
+    <string>清空数据库</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actBackupDB">
+   <property name="text">
+    <string>备份数据库</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actExit">
+   <property name="text">
+    <string>退出程序</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actReloadDB">
+   <property name="text">
+    <string>重新加载数据库</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actMove2Grop">
+   <property name="text">
+    <string>移动到组</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actCreateGroup">
+   <property name="text">
+    <string>新建组</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actRemoveItem">
+   <property name="text">
+    <string>删除项</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actRemoveGroup">
+   <property name="text">
+    <string>删除组</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actShortCut">
+   <property name="text">
+    <string>快捷键</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actHelp">
+   <property name="text">
+    <string>帮助</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>listWidget</tabstop>
+  <tabstop>lineEdit</tabstop>
+  <tabstop>toolButton</tabstop>
+ </tabstops>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

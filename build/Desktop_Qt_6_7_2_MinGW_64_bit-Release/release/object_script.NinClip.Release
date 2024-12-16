@@ -1,0 +1,10 @@
+release/database.o
+release/main.o
+release/dialog.o
+release/qhotkey.o
+release/qhotkey_win.o
+release/qrc_res.o
+release/moc_database.o
+release/moc_dialog.o
+release/moc_qhotkey.o
+release/moc_qhotkey_p.o

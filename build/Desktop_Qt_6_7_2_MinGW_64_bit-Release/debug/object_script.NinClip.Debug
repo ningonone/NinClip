@@ -1,0 +1,10 @@
+debug/database.o
+debug/main.o
+debug/dialog.o
+debug/qhotkey.o
+debug/qhotkey_win.o
+debug/qrc_res.o
+debug/moc_database.o
+debug/moc_dialog.o
+debug/moc_qhotkey.o
+debug/moc_qhotkey_p.o
